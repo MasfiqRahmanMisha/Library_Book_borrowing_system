@@ -5,6 +5,7 @@ public class login extends javax.swing.JFrame {
     Connection conn;
 PreparedStatement pst;
 ResultSet rs;
+int tama;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(login.class.getName());
 
     public login() {

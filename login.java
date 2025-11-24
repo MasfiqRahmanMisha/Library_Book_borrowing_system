@@ -8,6 +8,8 @@ ResultSet rs;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(login.class.getName());
 
     public login() {
+        //connection to database
+        
         conn = javaConnect.connectDB();
         initComponents();
     }
@@ -137,6 +139,7 @@ ResultSet rs;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 try{
+    //check the code jButtonActionformed
             String sql = "select * from user where username=? and password=?";
             pst=conn.prepareStatement(sql);
             pst.setString(1,jTextField1.getText());
@@ -163,15 +166,10 @@ try{
 // TODO add your handling code here:
     }                                        
 
-    /**
-     * @param args the command line arguments
-     */
+  
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+     
+       
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
